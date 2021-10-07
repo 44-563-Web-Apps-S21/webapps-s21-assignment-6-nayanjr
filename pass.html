@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Hidden</title>
+    </head>
+
+<body>
+
+<h2>Hidden things by Kamal Nayan Karaturi</h2>
+
+<form>
+    <div class="form-group" style="width: 25%;">
+        <label for="secret_phrase">Enter the secret phrase</label>
+        <input type="password" id="phrase" value="let me in">
+        <br>
+        <br>
+    </div>
+    <div class="form-group" style="width: 25%;">
+        <label for="phrase_name">Enter a phrase</label>
+        <input type="text" id="phrase_text">
+        <br>
+        <br>
+    </div>
+</form>
+
+<button class="btn btn-success" onclick="processphrase()">check the phrase</button>
+<p id="result"></p>
+<div class="container">
+    <img src="anaconda.jpg" class="img-thumbnail" alt="Anaconda" onclick="newImage();" id="images"
+        style="width: 200; height: 200;">
+</div>
+<script>
+    var correct = 0;
+    var wrong = 0;
+    count = 0;
+
+    function processphrase() {
+        qw = document.getElementById("phrase").value
+        er = document.getElementById("phrase_text").value
+        res = document.getElementById("result")
+        if (qw == er) {
+            correct += 1;
+            alert("Access allowed");
+            res.innerHTML = "RIGHT - " + correct;
+        }
+        else {
+            wrong += 1;
+            alert("Access denied");
+            if (wrong >= 2) {
+                document.getElementById("processButton").onclick = function () { alert("Account Locked") }
+            }
+        }
+        out = document.getElementById("result")
+        res.innerHTML = "WRONG - " + wrong;
+    }
+
+    function newImage() {
+        switch (count) {
+            case 0:
+                document.getElementById("images").src = "Anaconda.jpg"
+                count = count + 1
+                break;
+            case 1:
+                document.getElementById("images").src = "rabbit.jpg"
+                count = count + 1
+                break;
+            case 2:
+                document.getElementById("images").src = "racoon.jpg"
+                count = 0
+                break;
+        }
+    }
+</script>
+
+</body>
+
+</html>
