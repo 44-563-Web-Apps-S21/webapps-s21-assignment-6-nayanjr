@@ -2,3 +2,5 @@
 Assignment introduction Java Script and DOM
 
 [Pass](https://44-563-web-apps-s21.github.io/webapps-s21-assignment-6-nayanjr/pass.html)
+[Car](https://44-563-web-apps-s21.github.io/webapps-s21-assignment-6-nayanjr/car.html)
+[Arithmetic](https://44-563-web-apps-s21.github.io/webapps-s21-assignment-6-nayanjr/arithmetic.html)
